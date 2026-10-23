@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option java_package = "br.edu.ifg.cadastroalunosrestprotobuf.proto";
+option java_outer_classname = "AlunoProto";
+
+message Aluno {
+  int32 id = 1;
+  string nome = 2;
+  string curso = 3;
+}
