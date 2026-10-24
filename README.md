@@ -131,6 +131,17 @@ O binário não envia o nome dos campos, só o número de cada um. Lendo o hexad
 - A API não usa banco de dados: é um exemplo didático.
 - Os endpoints REST trocam apenas JSON. O Protobuf é demonstrado no `ProtobufDemo`.
 
+  ## Evidências
+
+  ### API REST (curl)
+  ![Testes com curl](docs/curl-rest.png)
+
+  ### JSON
+  ![Saída do JsonDemo](docs/json-demo.png)
+
+  ### Comparação JSON × Protobuf
+  ![Saída do ProtobufDemo](docs/protobuf-demo.png)
+
 ## Autor
 
 André Luís Cardoso Rezende Pimenta — Engenharia de Software, Instituto Federal de Goiás (IFG). Atividade da disciplina de Sistemas Distribuídos.
