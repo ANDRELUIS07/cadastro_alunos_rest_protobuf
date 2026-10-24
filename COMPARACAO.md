@@ -6,11 +6,23 @@ Objeto usado: `Aluno(id=1, nome="Ana Silva", curso="Engenharia de Software")`
 |---|---|---|
 | Representação | Texto | Binário |
 | Legibilidade | Alta, legível por humanos | Baixa, exige ferramenta para ler |
-| Tamanho (este exemplo) | 60 bytes | 37 bytes (confirmar na saída do `ProtobufDemo`) |
+| Tamanho (este exemplo) | 60 bytes | 37 bytes (cerca de 39% menor) |
 | Dependência de esquema | Opcional (JSON Schema) | Obrigatória (arquivo `.proto`) |
 | Nome dos campos na mensagem | Enviados como texto | Não enviados, só o número do campo |
 | Geração de código | Não necessária | Classes geradas a partir do `.proto` |
 | Uso típico | APIs REST públicas | gRPC e comunicação interna entre serviços |
+
+## Resultado medido
+
+Saída do `ProtobufDemo` para o objeto acima:
+
+```
+Bytes JSON:     60
+Bytes Protobuf: 37
+Protobuf e 39% menor
+```
+
+O Protobuf ocupa menos espaço porque não envia o nome dos campos (`id`, `nome`, `curso`), apenas o número de cada um (1, 2 e 3) definido no `.proto`.
 
 ## Quando usar cada formato em uma API REST
 
